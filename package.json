@@ -1,0 +1,29 @@
+{
+  "name": "computer_practice",
+  "version": "1.0.0",
+  "description": "Комп'ютерна практика, Діденко Ілля Сергійович, варіант 5",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "npm install && npm run copy && node index",
+
+    "download": "npm install",
+    "quickstart": "node index",
+    "dev": "nodemon index",
+    "clearcache": "npm cache clean -force",
+    "copy": "IF NOT EXIST '\\project' (md \\project) && xcopy . \\project /Y /C /R /S /Q",
+    
+    "lint": "eslint . --ext .js",
+    "lint-fix": "eslint --fix . --ext .js"
+  },
+  "author": "Didenko",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.31.0",
+    "nodemon": "^2.0.20"
+  }
+}
